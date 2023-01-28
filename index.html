@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="cont">
+    <h3>ENTER THE DATA OF ORDER</h3>
+    <div class="detail">
+      <b>Name:</b>
+      <input type="text" placeholder="Name" id="name"><br><br>
+      <b>Mobile:</b>
+      <input type="number" min="0" placeholder="Mob.no." id="mob">
+    </div>
+    <div class="container1">
+      <Rr>
+        <ul class="nav nav-pills" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="ab" data-toggle="pill" href="#home">JUICE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ab1" data-toggle="pill" href="#menu1">BURGER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ab2" data-toggle="pill" href="#menu2">SANDWICH</a>
+          </li>
+          <button type="button" class="btn" data-toggle="modal" data-target="#myModal">+ADD</button>
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Add Items</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <b>Name:</b><br><input type="text" placeholder="Product Name" style="width: 100%;" id="pname"><br><br>
+                  <b>Price:</b><br><input type="number" min="1" placeholder="Fix Price" style="width: 100%;"
+                    id="pprice"><br><br>
+                  <b>Item</b><br>
+                  <select class="form-select" id="slc">
+                    <option>Choose Option</option>
+                    <option value="Juice">Juice</option>
+                    <option value="Burger">Burger</option>
+                    <option value="Sandwich">Sandwich</option>
+                  </select><br><br>
+                </div>
+                <div class="modal-footer">
+                  <button id="btn4" data-dismiss="modal">ADD</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+        <div class="line"></div>
+        <div class="tab-content">
+          <div id="home" class="container tab-pane active"><br>
+            <table id="tab1">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                </tr>
+              </thead>
+              <tbody id="juicelist">
+                <tr>
+                  <td><input type="checkbox" id="c0"></td>
+                  <td id="t0">Lime Juice</td>
+                  <td id="p0">50</td>
+                  <td><input type="number" min="1" max="10" id="q0" disabled></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="c1"></td>
+                  <td id="t1">Mango Juice</td>
+                  <td id="p1">50</td>
+                  <td><input type="number" min="1" max="10" id="q1" disabled></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="c2"></td>
+                  <td id="t2">Orange Juice</td>
+                  <td id="p2">50</td>
+                  <td><input type="number" min="1" max="10" id="q2" disabled></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="menu1" class="container tab-pane fade"><br>
+            <table id="tab1">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                </tr>
+              </thead>
+              <tbody id="burgerlist">
+                <tr>
+                  <td><input type="checkbox" id="c3"></td>
+                  <td id="t3">Veg Burger</td>
+                  <td id="p3">70</td>
+                  <td><input type="number" min="1" max="10" id="q3" disabled></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="c4"></td>
+                  <td id="t4">Chicken Burger</td>
+                  <td id="p4">70</td>
+                  <td><input type="number" min="1" max="10" id="q4" disabled></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="c5"></td>
+                  <td id="t5">Cheese Burger</td>
+                  <td id="p5">70</td>
+                  <td><input type="number" min="1" max="10" id="q5" disabled></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="menu2" class="container tab-pane fade"><br>
+            <table id="tab1">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                </tr>
+              </thead>
+              <tbody id="sandwichlist">
+                <tr>
+                  <td><input type="checkbox" id="c6"></td>
+                  <td id="t6">Veg Sandwich</td>
+                  <td id="p6">90</td>
+                  <td><input type="number" min="1" max="10" id="q6" disabled></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="c7"></td>
+                  <td id="t7">Grill Sandwich</td>
+                  <td id="p7">90</td>
+                  <td><input type="number" min="1" max="10" id="q7" disabled></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="c8"></td>
+                  <td id="t8">Cheese Sandwich</td>
+                  <td id="p8">90</td>
+                  <td><input type="number" min="1" max="20" id="q8" disabled></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <button class="btn1" onclick="func()" id="but"> Place Order</button>
+        <div class="cont2">
+          <b class="bold">Name:</b>
+          <span id="m"></span><br>
+          <b class="bold">Mobile no.</b>
+          <span id="n"></span><br>
+          <button class="btn5" onclick="bill()">View Bill</button>
+          <h5 class="h5">BILL OF ORDER</h5>
+          <table id="tab2"></table>
+        </div>
+        <script src="res.js"></script>
+</body>
+
+</html>
